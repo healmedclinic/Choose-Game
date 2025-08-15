@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bored while waiting for the doctor? Choose Your Path!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .links-container {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .link-option {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+
+        .link-button {
+            display: block;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .link-button:hover::before {
+            left: 100%;
+        }
+
+        .link-button:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 15px 35px rgba(31, 38, 135, 0.3);
+        }
+
+        .link-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .link-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .links-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .link-option {
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Path</h1>
+        <p class="subtitle">Select one of the games/quizzes below to continue!</p>
+        
+        <div class="links-container">
+            <div class="link-option">
+                <a href="#option1" class="link-button">
+                    <div class="link-title">Find your Brain Type! Quiz</div>
+                    <div class="link-description">Explore the first path and discover what lies ahead</div>
+                </a>
+            </div>
+            
+            <div class="link-option">
+                <a href="#option2" class="link-button">
+                    <div class="link-title">Zap The Cravings! Game</div>
+                    <div class="link-description">Take the second route and see where it leads you</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
